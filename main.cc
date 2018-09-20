@@ -211,6 +211,7 @@ int main(int argc, char* argv[])
 
 	for (int i = 1; i < argc; ++i) {
 		char* endptr = NULL;
+		errno = 0;
 		int id = strtol(argv[i], &endptr, 0);
 		if (errno != 0) {
 			perror("Invalid id");
