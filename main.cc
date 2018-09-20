@@ -122,7 +122,7 @@ int PostInfluxData(const std::string& values)
 		return -1;
 	}
 
-	rc = curl_easy_setopt(curl, CURLOPT_URL, "http://localhost:8086/write?db=mydb");
+	rc = curl_easy_setopt(curl, CURLOPT_URL, "http://192.168.77.79:8086/write?db=mydb");
 	if (rc != CURLE_OK) {
 		syslog(LOG_ERR, "Failed to set CURLOPT_URL: %s", curl_easy_strerror(rc));
 		return -1;
